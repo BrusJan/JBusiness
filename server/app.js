@@ -1,21 +1,9 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://jbapp:zU1wRwLdiasvuxez@jbusiness-4hoxm.mongodb.net/test?retryWrites=true&w=majority&useNewUrlParser=true', {
-  useCreateIndex: true,
-  useNewUrlParser: true
-});
-mongoose.Promise = global.Promise;
-let db = mongoose.connection;
-
-// Check db connection
-db.once('open', function () {
-  console.log('Connected to JBusiness mongo db on cloud');
-})
-db.on('error', function (err) {
-  console.log(err);
-})
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb+srv://jbapp:jbapp@jbusiness-4hoxm.mongodb.net/test?retryWrites=true&w=majority&useNewUrlParser=true";
+const client = new MongoClient(url, { useNewUrlParser: true });
 
 // Load models
 let User = require('./models/user');
@@ -33,13 +21,11 @@ app.get('/', function (req, res) {
 });
 app.get('/users', function (req, res) {
   try {
-    User.find({}, function (err, users) {
-      if (err) { console.log(err); }
-      else {
-        res.render('users', {
-          users: users
-        });
-      }
+    client.connect(err => {
+      let users = client.db("jbusiness").collection("users");
+      // perform actions on the collection object
+      res.send(users.find({}).toArray());
+      client.close();
     });
   }
   catch (err) {

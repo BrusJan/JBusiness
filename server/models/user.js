@@ -1,4 +1,4 @@
-let mongoose = require('mongoose');
+/* let mongoose = require('mongoose');
 
 let userSchema = mongoose.Schema({
   username: {
@@ -19,4 +19,4 @@ let userSchema = mongoose.Schema({
   }
 })
 
-let User = module.exports = mongoose.model('User', userSchema)
+let User = module.exports = mongoose.model('User', userSchema) */
