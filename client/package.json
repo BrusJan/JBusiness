@@ -27,6 +27,7 @@
     "popper": "^1.0.1",
     "rxjs": "~6.4.0",
     "sb-admin-2": "^3.3.8",
+    "simple-line-icons": "^2.4.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
