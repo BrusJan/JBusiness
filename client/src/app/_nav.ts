@@ -41,118 +41,54 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
-    name: 'Theme'
-  },
-  {
-    name: 'Colors',
-    url: '/theme/colors',
-    icon: 'icon-drop'
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    icon: 'icon-pencil'
-  },
-  {
-    title: true,
     name: 'Components'
   },
   {
-    name: 'Base',
+    name: 'Report',
     url: '/base',
     icon: 'icon-puzzle',
     children: [
       {
-        name: 'Cards',
+        name: 'Projects',
         url: '/base/cards',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Carousels',
+        name: 'People',
         url: '/base/carousels',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Collapses',
-        url: '/base/collapses',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Forms',
-        url: '/base/forms',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Pagination',
-        url: '/base/paginations',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Popovers',
-        url: '/base/popovers',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Progress',
-        url: '/base/progress',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Switches',
-        url: '/base/switches',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Tables',
-        url: '/base/tables',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Tabs',
-        url: '/base/tabs',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Tooltips',
-        url: '/base/tooltips',
         icon: 'icon-puzzle'
       }
     ]
   },
   {
-    name: 'Buttons',
+    name: 'Tasks',
     url: '/buttons',
     icon: 'icon-cursor',
     children: [
       {
-        name: 'Buttons',
+        name: 'New task',
         url: '/buttons/buttons',
         icon: 'icon-cursor'
       },
       {
-        name: 'Dropdowns',
+        name: 'My tasks',
         url: '/buttons/dropdowns',
-        icon: 'icon-cursor'
-      },
-      {
-        name: 'Brand Buttons',
-        url: '/buttons/brand-buttons',
         icon: 'icon-cursor'
       }
     ]
   },
   {
-    name: 'Charts',
+    name: 'Comsumers',
     url: '/charts',
     icon: 'icon-pie-chart'
   },
   {
-    name: 'Icons',
+    name: 'Customers',
     url: '/icons',
     icon: 'icon-star',
     children: [
       {
-        name: 'CoreUI Icons',
+        name: 'Management',
         url: '/icons/coreui-icons',
         icon: 'icon-star',
         badge: {
@@ -166,18 +102,13 @@ export const navItems: NavData[] = [
         icon: 'icon-star'
       },
       {
-        name: 'Font Awesome',
+        name: 'CMS links',
         url: '/icons/font-awesome',
         icon: 'icon-star',
         badge: {
           variant: 'secondary',
           text: '4.7'
         }
-      },
-      {
-        name: 'Simple Line Icons',
-        url: '/icons/simple-line-icons',
-        icon: 'icon-star'
       }
     ]
   },
@@ -185,32 +116,15 @@ export const navItems: NavData[] = [
     name: 'Notifications',
     url: '/notifications',
     icon: 'icon-bell',
-    children: [
-      {
-        name: 'Alerts',
-        url: '/notifications/alerts',
-        icon: 'icon-bell'
-      },
-      {
-        name: 'Badges',
-        url: '/notifications/badges',
-        icon: 'icon-bell'
-      },
-      {
-        name: 'Modals',
-        url: '/notifications/modals',
-        icon: 'icon-bell'
-      }
-    ]
+    badge: {
+      variant: 'info',
+      text: 'NEW'
+    }
   },
   {
     name: 'Widgets',
     url: '/widgets',
     icon: 'icon-calculator',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
   },
   {
     divider: true
@@ -222,38 +136,12 @@ export const navItems: NavData[] = [
   {
     name: 'Pages',
     url: '/pages',
-    icon: 'icon-star',
-    children: [
-      {
-        name: 'Login',
-        url: '/login',
-        icon: 'icon-star'
-      },
-      {
-        name: 'Register',
-        url: '/register',
-        icon: 'icon-star'
-      },
-      {
-        name: 'Error 404',
-        url: '/404',
-        icon: 'icon-star'
-      },
-      {
-        name: 'Error 500',
-        url: '/500',
-        icon: 'icon-star'
-      }
-    ]
+    icon: 'icon-star'
   },
   {
-    name: 'Disabled',
+    name: 'User management',
     url: '/dashboard',
     icon: 'icon-ban',
-    badge: {
-      variant: 'secondary',
-      text: 'NEW'
-    },
     attributes: { disabled: true },
   },
   {
