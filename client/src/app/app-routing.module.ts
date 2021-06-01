@@ -7,7 +7,7 @@ import { RegisterComponent } from './simple-pages/register/register.component';
 
 
 const routes: Routes = [
-  { path: '', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AuthGuard] },
+  { path: '', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule), canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
