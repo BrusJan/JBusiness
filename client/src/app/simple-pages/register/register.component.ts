@@ -6,7 +6,7 @@ import { UserService } from '../../_services/user.service';
 import { AlertService } from '../../_services/alert.service';
 
 
-@Component({templateUrl: 'register.component.html'})
+@Component({ templateUrl: 'register.component.html' })
 export class RegisterComponent implements OnInit {
     registerForm: FormGroup;
     loading = false;
@@ -50,5 +50,9 @@ export class RegisterComponent implements OnInit {
                     this.alertService.error(error);
                     this.loading = false;
                 });
+    }
+
+    resolved(captchaResponse: string) {
+        console.log(`Resolved captcha with response: ${captchaResponse}`);
     }
 }

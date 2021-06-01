@@ -15,6 +15,7 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { AlertComponent } from './_directives/alert.component';
 import { LayoutModule } from './layout/layout.module';
+import { RecaptchaModule, RecaptchaFormsModule } from "ng-recaptcha";
 
 export const API_URL = new InjectionToken<string>('apiUrl');
 
@@ -24,7 +25,9 @@ export const API_URL = new InjectionToken<string>('apiUrl');
     ReactiveFormsModule,
     HttpClientModule,
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
 ],
 declarations: [
     AppComponent,

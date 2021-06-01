@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
+    alertMessage: string;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -30,6 +31,10 @@ export class LoginComponent implements OnInit {
 
         // get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
+        this.alertService.getMessage().subscribe(m => {
+            this.alertMessage = m.text;
+        })
     }
 
     // convenience getter for easy access to form fields
@@ -54,5 +59,9 @@ export class LoginComponent implements OnInit {
                     this.alertService.error(error);
                     this.loading = false;
                 });
+    }
+
+    getAlertMessage(): string {
+        return this.alertMessage;
     }
 }

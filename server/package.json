@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "JBusiness backend",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "start": "node --inspect server"
   },
